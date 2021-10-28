@@ -21,9 +21,9 @@ double Course::getCourseMediumMark(Student::subject s) {
 }
 void Course::printCourseStudents() {
 	GroupList::Node* p = groups->head;
-	std::cout << "Íà êóğñå " << groupCount << " ãğóïïû.\n";
+	std::cout << "ĞĞ° ĞºÑƒÑ€ÑĞµ " << groupCount << " Ğ³Ñ€ÑƒĞ¿Ğ¿Ñ‹.\n";
 	while (p) {
-		std::cout << p->data.groupNumber << " ãğóïïà:\n";
+		std::cout << p->data.groupNumber << " Ğ³Ñ€ÑƒĞ¿Ğ¿Ğ°:\n";
 		p->data.printGroupStudents();
 		p = p->next;
 	}
