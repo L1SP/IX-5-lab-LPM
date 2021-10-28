@@ -13,9 +13,9 @@ int main() {
 	ifstream rff("Students.txt");
 	faculty->readFromFile(rff);
 	faculty->printAMMStudents();
-	cout << "Ââåäèòå êóðñ:\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÑƒÑ€Ñ:\n";
 	cin >> _course;
-	cout << "Ââåäèòå ïðåäìåò:\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚:\n";
 	cin >> _subject;
 	faculty->printCourseMediumMark(_course, _subject);
 	delete faculty;
