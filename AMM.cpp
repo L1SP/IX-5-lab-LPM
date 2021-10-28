@@ -27,24 +27,24 @@ void AMM::readFromFile(std::ifstream& rff) {
 		rff >> feetype;
 		for (int i = 0; i < 5; ++i) {
 			rff >> tmpsubject;
-			if (tmpsubject == "Теорвер")
+			if (tmpsubject == "РўРµРѕСЂРІРµСЂ")
 				tmpmarks[i].first = static_cast<Student::subject>(1);
-			else if (tmpsubject == "Английский")
+			else if (tmpsubject == "РђРЅРіР»РёР№СЃРєРёР№")
 				tmpmarks[i].first = static_cast<Student::subject>(2);
-			else if (tmpsubject == "Матанализ")
+			else if (tmpsubject == "РњР°С‚Р°РЅР°Р»РёР·")
 				tmpmarks[i].first = static_cast<Student::subject>(3);
-			else if (tmpsubject == "ЯМП")
+			else if (tmpsubject == "РЇРњРџ")
 				tmpmarks[i].first = static_cast<Student::subject>(4);
-			else if (tmpsubject == "ООП")
+			else if (tmpsubject == "РћРћРџ")
 				tmpmarks[i].first = static_cast<Student::subject>(5);
 			rff >> tmpmark;
-			if (tmpmark == "Неудовлетворительно")
+			if (tmpmark == "РќРµСѓРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅРѕ")
 				tmpmarks[i].second = static_cast<Student::mark>(2);
-			else if (tmpmark == "Удовлетворительно")
+			else if (tmpmark == "РЈРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅРѕ")
 				tmpmarks[i].second = static_cast<Student::mark>(3);
-			else if (tmpmark == "Хорошо")
+			else if (tmpmark == "РҐРѕСЂРѕС€Рѕ")
 				tmpmarks[i].second = static_cast<Student::mark>(4);
-			else if (tmpmark == "Отлично")
+			else if (tmpmark == "РћС‚Р»РёС‡РЅРѕ")
 				tmpmarks[i].second = static_cast<Student::mark>(5);
 		}
 		std::getline(rff, emptyline).ignore(1,'\n');
@@ -55,9 +55,9 @@ void AMM::printAMMStudents() {
 	std::cout << facultyName<<'\n';
 	for (int i = 0; i < 5; ++i) {
 		if (!(c[i].groups->head))
-			std::cout << "На " << i + 1 << " курсе никто не учится.\n";
+			std::cout << "РќР° " << i + 1 << " РєСѓСЂСЃРµ РЅРёРєС‚Рѕ РЅРµ СѓС‡РёС‚СЃСЏ.\n";
 		else {
-			std::cout << i + 1 << " курс:\n";
+			std::cout << i + 1 << " РєСѓСЂСЃ:\n";
 			c[i].printCourseStudents();
 		}
 	}
@@ -111,23 +111,23 @@ void AMM::insertStudent(std::string& _fio, int& _course, int& _group, std::strin
 }
 void AMM::printCourseMediumMark(int& _course, std::string _sub) {
 	if (!(c[_course - 1].groups->head)) {
-		std::cout << "На заданном курсе никто не учится.\n";
+		std::cout << "РќР° Р·Р°РґР°РЅРЅРѕРј РєСѓСЂСЃРµ РЅРёРєС‚Рѕ РЅРµ СѓС‡РёС‚СЃСЏ.\n";
 		return;
 	}
 	Student::subject sub;
-	if (_sub == "Теорвер")
+	if (_sub == "РўРµРѕСЂРІРµСЂ")
 		sub = static_cast<Student::subject>(1);
-	else if (_sub == "Английский")
+	else if (_sub == "РђРЅРіР»РёР№СЃРєРёР№")
 		sub = static_cast<Student::subject>(2);
-	else if (_sub == "Матанализ")
+	else if (_sub == "РњР°С‚Р°РЅР°Р»РёР·")
 		sub = static_cast<Student::subject>(3);
-	else if (_sub == "ЯМП")
+	else if (_sub == "РЇРњРџ")
 		sub = static_cast<Student::subject>(4);
-	else if (_sub == "ООП")
+	else if (_sub == "РћРћРџ")
 		sub = static_cast<Student::subject>(5);
 	else {
-		std::cout << "Заданного предмета нет.\n";
+		std::cout << "Р—Р°РґР°РЅРЅРѕРіРѕ РїСЂРµРґРјРµС‚Р° РЅРµС‚.\n";
 		return;
 	}
-	std::cout<<"Средний балл по заданному предмету на "<<_course<<" курсе: " << c[_course - 1].getCourseMediumMark(sub)<<'\n';
+	std::cout<<"РЎСЂРµРґРЅРёР№ Р±Р°Р»Р» РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РїСЂРµРґРјРµС‚Сѓ РЅР° "<<_course<<" РєСѓСЂСЃРµ: " << c[_course - 1].getCourseMediumMark(sub)<<'\n';
 }
