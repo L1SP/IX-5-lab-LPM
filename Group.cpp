@@ -23,11 +23,11 @@ double Group::getGroupMediumMark(Student::subject s) {
 }
 void Group::printGroupStudents() {
 	StudentList::Node* p = students->head;
-	std::cout << "Â ãğóïïå " << studentCount << " ñòóäåíòîâ.\n";
+	std::cout << "Ğ’ Ğ³Ñ€ÑƒĞ¿Ğ¿Ğµ " << studentCount << " ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ¾Ğ².\n";
 	while (p) {
-		std::cout << "Ñòóäåíò: " << p->data.fio<<'\n';
-		std::cout << "Ôîğìà îáó÷åíèÿ: " << p->data.feeType << '\n';
-		std::cout << "Îöåíêè çà ıêçàìåíû:\n";
+		std::cout << "Ğ¡Ñ‚ÑƒĞ´ĞµĞ½Ñ‚: " << p->data.fio<<'\n';
+		std::cout << "Ğ¤Ğ¾Ñ€Ğ¼Ğ° Ğ¾Ğ±ÑƒÑ‡ĞµĞ½Ğ¸Ñ: " << p->data.feeType << '\n';
+		std::cout << "ĞÑ†ĞµĞ½ĞºĞ¸ Ğ·Ğ° ÑĞºĞ·Ğ°Ğ¼ĞµĞ½Ñ‹:\n";
 		for (int i = 0; i < 5; ++i)
 			std::cout << p->data.marks[i].first << ", " << p->data.marks[i].second<<'\n';
 		std::cout << '\n';
