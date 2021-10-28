@@ -2,8 +2,8 @@
 #include <iostream>
 #include "Student.h"
 Student::Student() {
-	fio = "Иванов Иван Иванович";
-	feeType = "бюджет";
+	fio = "РРІР°РЅРѕРІ РРІР°РЅ РРІР°РЅРѕРІРёС‡";
+	feeType = "Р±СЋРґР¶РµС‚";
 	marks = new std::pair<subject, mark>[5];
 }
 Student::Student(std::string& _fio, std::string& _feeType, std::pair<subject, mark>* _marks) {
@@ -26,37 +26,37 @@ int Student::getSubjectMark(subject s) {
 }
 std::ostream& operator<<(std::ostream& os, const Student::subject s) {
 	switch (s) {
-	case Student::subject::Теорвер:
-		os << "Теорвер";
+	case Student::subject::РўРµРѕСЂРІРµСЂ:
+		os << "РўРµРѕСЂРІРµСЂ";
 		break;
-	case Student::subject::Английский:
-		os << "Английский";
+	case Student::subject::РђРЅРіР»РёР№СЃРєРёР№:
+		os << "РђРЅРіР»РёР№СЃРєРёР№";
 		break;
-	case Student::subject::Матанализ:
-		os << "Матанализ";
+	case Student::subject::РњР°С‚Р°РЅР°Р»РёР·:
+		os << "РњР°С‚Р°РЅР°Р»РёР·";
 		break;
-	case Student::subject::ЯМП:
-		os << "ЯМП";
+	case Student::subject::РЇРњРџ:
+		os << "РЇРњРџ";
 		break;
-	case Student::subject::ООП:
-		os << "ООП";
+	case Student::subject::РћРћРџ:
+		os << "РћРћРџ";
 		break;
 	}
 	return os;
 }
 std::ostream& operator<<(std::ostream& os, const Student::mark m) {
 	switch (m) {
-	case Student::mark::Неудовлетворительно:
-		os << "Неудовлетворительно";
+	case Student::mark::РќРµСѓРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅРѕ:
+		os << "РќРµСѓРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅРѕ";
 		break;
-	case Student::mark::Удовлетворительно:
-		os << "Удовлетворительно";
+	case Student::mark::РЈРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅРѕ:
+		os << "РЈРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅРѕ";
 		break;
-	case Student::mark::Хорошо:
-		os << "Хорошо";
+	case Student::mark::РҐРѕСЂРѕС€Рѕ:
+		os << "РҐРѕСЂРѕС€Рѕ";
 		break;
-	case Student::mark::Отлично:
-		os << "Отлично";
+	case Student::mark::РћС‚Р»РёС‡РЅРѕ:
+		os << "РћС‚Р»РёС‡РЅРѕ";
 		break;
 	}
 	return os;
