@@ -7,7 +7,7 @@ class AMM
 	Course *c = new Course[5];
 	const std::string facultyName;
 public:
-	AMM(): facultyName("олл") {};
+	AMM(): facultyName("п÷п°п°") {};
 	~AMM();
 	void readFromFile(std::ifstream& rff);
 	void insertStudent(std::string& _fio, int& _course, int& _group, std::string& _feeType, std::pair<Student::subject, Student::mark>* _marks);
